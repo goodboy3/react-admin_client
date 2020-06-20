@@ -2,6 +2,9 @@
 
 const CracoLessPlugin = require('craco-less');
 const CracoAntDesignPlugin = require("craco-antd");
+const apiMocker = require('mocker-api')
+const path = require('path');
+const { runInNewContext } = require('vm');
 
 module.exports = {
     plugins: [
@@ -18,4 +21,13 @@ module.exports = {
         },
         { plugin: CracoAntDesignPlugin }
     ],
+    // devServer: {
+    //     //before: require('./mock/index')
+    //     before(app)
+    //     {
+    //         apiMocker(app, path.resolve('./mock/index.js'), {
+                
+    //         })
+    //     }
+    // }
 };
