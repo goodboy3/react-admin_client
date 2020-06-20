@@ -26,6 +26,11 @@ class LeftNav extends Component<Props,States>
 
     menuNodes: React.ReactElement[] = [];
 
+    /**
+     * @description: 
+     * @param {type} 
+     * @return: 
+     */
     getMenuNodes(menuList:IMenuList[],frontKey:string='')
     {
         return menuList.map(item =>

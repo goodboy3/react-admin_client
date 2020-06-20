@@ -2,8 +2,10 @@
  * 应用的根组件
  */
 
+
+
 import React, { Component } from 'react'
-import { HashRouter as Router, Route,Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Login from "./pages/login/login"
 import Admin from "./pages/admin/admin"
