@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Card,Select,Input,Button,Table} from 'antd'
-import { PlusOutlined, ArrowRightOutlined } from '@ant-design/icons'
+import { PlusOutlined } from '@ant-design/icons'
 import LinkButton from '../../components/link-button/link-button'
 
 const Option=Select.Option
@@ -66,19 +66,10 @@ export default class ProductHome extends Component<Props,State>
         },
     ];
 
-    constructor(props:Props)
-    {
-        super(props)
-
-    }
-
-    
-
+   
     render()
     {
 
-
-        
 
         const title = (
             <span>

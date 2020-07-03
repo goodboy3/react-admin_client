@@ -36,6 +36,9 @@ export default class Login extends Component<Props,State>
     
     onFinish = async (values: Store) =>
     {
+        
+        console.log(new Error());
+        
 
         //规则通过,开始发送登录请求
         console.log('Received values of form: ', values);
@@ -72,6 +75,7 @@ export default class Login extends Component<Props,State>
 
     render()
     {
+        console.log("test1111");
         if (MemoryUtils.user && MemoryUtils.user._id) 
         {
             return (

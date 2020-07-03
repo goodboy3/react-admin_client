@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Select, Input } from 'antd'
+import { Form, Input } from 'antd'
 import { FormInstance } from 'antd/lib/form';
 const Item = Form.Item;
 

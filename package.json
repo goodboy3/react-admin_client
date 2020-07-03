@@ -16,12 +16,12 @@
     "craco-antd": "^1.18.0",
     "craco-less": "^1.17.0",
     "jsonp": "^0.2.1",
-    "log4js": "^6.3.0",
-    "moment": "^2.26.0",
+    "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "source-map-support": "^0.5.19",
     "store": "^2.0.12",
     "typescript": "^3.7.5"
   },
@@ -50,6 +50,7 @@
     "@types/jsonp": "^0.2.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/store": "^2.0.2",
+    "babel-plugin-source-map-support": "^2.1.2",
     "mocker-api": "^2.1.0"
   },
   "proxy": "http://localhost:40000"

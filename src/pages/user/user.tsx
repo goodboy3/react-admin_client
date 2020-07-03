@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ajax from '../../api/ajax'
 
-import axios from 'axios'
+// import axios from 'axios'
 
 export default class User extends Component
 {

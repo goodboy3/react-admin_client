@@ -83,7 +83,7 @@ export default class Category extends Component<Prop, State>
         let id= parentId||this.state.parentId
         let result = await reqCategorys(id);
         this.setState({ loading: false })
-        if (result && result.status == 0)
+        if (result && result.status === 0)
         {
             if (this.state.parentId === '0')
             {
@@ -203,7 +203,7 @@ export default class Category extends Component<Prop, State>
                         console.log(values);
 
                         let result = await reqAddCategory(values.categoryName, values.parentId)
-                        if (result&&result.status==0) {
+                        if (result&&result.status===0) {
                             this.getCategory()
                         }
                         else
@@ -231,9 +231,8 @@ export default class Category extends Component<Prop, State>
                     onOk={async () =>
                     {
 
-                        let result
                         try {
-                            result = await this.updateForm.current.formRef.current.validateFields()
+                            await this.updateForm.current.formRef.current.validateFields()
                             
                         } catch (error) {
                             return
@@ -248,7 +247,7 @@ export default class Category extends Component<Prop, State>
                         console.log(this.categroy._id);
                         console.log(this.updateForm.current.formRef.current.getFieldsValue());
                         
-                        result = await reqUpdateCategory(this.categroy._id,"sdfsdf")
+                        await reqUpdateCategory(this.categroy._id,"sdfsdf")
 
 
                         //更新列表

@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-06-21 23:35:35
+ * @LastEditTime: 2020-07-03 02:30:15
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \react-admin_client\src\api\ajax.ts
+ */ 
 
 import axios, { AxiosResponse } from 'axios'
 import { message } from 'antd'
@@ -53,7 +61,7 @@ export default async function ajax(url: string, data = {}, type: 'POST' | 'GET' 
             resolve(response.data)
         }).catch(error =>
         {
-            console.log(error);
+            //console.log(error);
             reject(error)
         })
     })
