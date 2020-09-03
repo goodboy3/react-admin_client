@@ -53,5 +53,5 @@
     "babel-plugin-source-map-support": "^2.1.2",
     "mocker-api": "^2.1.0"
   },
-  "proxy": "http://localhost:40000"
+  "proxy": "http://localhost:50000"
 }

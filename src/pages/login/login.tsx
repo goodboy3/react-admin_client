@@ -12,6 +12,9 @@ import { RouteComponentProps, Redirect } from 'react-router-dom'
 import { MemoryUtils } from '../../utils/memoryUtils'
 import {StorageUtils} from '../../utils/storageUtils'
 
+
+import axios, { AxiosResponse } from "axios";
+
 interface Props extends RouteComponentProps
 {
 
@@ -36,35 +39,42 @@ export default class Login extends Component<Props,State>
     
     onFinish = async (values: Store) =>
     {
-        
-        console.log(new Error());
-        
 
-        //规则通过,开始发送登录请求
-        console.log('Received values of form: ', values);
-        const { username, password } = values
-        
-        let result:any = await reqLogin(username, password)
-        console.log(result);
-        if (result && result.status === 0)
+        axios.get("http://localhost:40000/users/234").then(value =>
         {
-            //记录用户信息
-            let user = result.data
-            MemoryUtils.user = user
-            StorageUtils.saveUser(user)
-            console.log(MemoryUtils.user);
+            console.log(value);
+            
+        }).catch(err =>
+        {
+            console.error(err);
+            
+        })
+
+        // // 规则通过,开始发送登录请求
+        // console.log('Received values of form: ', values);
+        // const { username, password } = values
+        
+        // let result:any = await reqLogin(username, password)
+        // console.log(result);
+        // if (result && result.status === 0)
+        // {
+        //     //记录用户信息
+        //     let user = result.data
+        //     MemoryUtils.user = user
+        //     StorageUtils.saveUser(user)
+        //     console.log(MemoryUtils.user);
             
 
-            //登录成功,页面进行跳转
-            message.success("登录成功")
-            this.props.history.replace('/')
+        //     //登录成功,页面进行跳转
+        //     message.success("登录成功")
+        //     this.props.history.replace('/')
 
-        }
-        else if (result && result.status === 1)
-        {
-            //登录失败,用户名或者密码错误
-            message.error(result.msg)
-        }
+        // }
+        // else if (result && result.status === 1)
+        // {
+        //     //登录失败,用户名或者密码错误
+        //     message.error(result.msg)
+        // }
         // else
         // {
         //     message.error("出现未知错误")
